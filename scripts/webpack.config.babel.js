@@ -3,6 +3,8 @@ import path from "path"
 import webpack from "webpack"
 import ExtractTextPlugin from "extract-text-webpack-plugin"
 
+import renderer from "./remark-renderer"
+
 export default ({ config, pkg }) => ({
   ...config.dev && {
     devtool: "cheap-module-eval-source-map",
@@ -14,7 +16,7 @@ export default ({ config, pkg }) => ({
         loader: "statinamic/lib/content-loader",
         query: {
           context: path.join(config.cwd, config.source),
-          // renderer: (text) => html
+          renderer: renderer,
           feedsOptions: {
             title: pkg.name,
             site_url: pkg.homepage,
