@@ -9,7 +9,8 @@
     "start": "statinamic start",
     "build": "statinamic build",
     "pretest": "npm run lint",
-    "test": "npm run build"
+    "test": "npm run build",
+    "deploy": "surge dist staging.nhakhoaphuocbinh.com"
   },
   "statinamic": {
     "CNAME": true
@@ -25,7 +26,11 @@
     "parser": "babel-eslint",
     "extends": [
       "eslint-config-i-am-meticulous/react"
-    ]
+    ],
+    "rules": {
+      "react/jsx-no-literals": 0,
+      "max-len": 0
+    }
   },
   "stylelint": {
     "extends": "stylelint-config-standard"
@@ -72,7 +77,8 @@
     "whatwg-fetch": "^0.9.0"
   },
   "dependencies": {
-    "purecss": "^0.6.0",
+    "classnames": "^2.2.3",
+    "postcss-import": "^8.0.2",
     "remark": "^4.1.2",
     "remark-autolink-headings": "^3.0.0",
     "remark-highlight.js": "^3.0.0",

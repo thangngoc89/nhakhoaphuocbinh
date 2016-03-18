@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
 
-import Header from "../Header"
-import Footer from "../Footer"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 import styles from "./index.css"
+import "../styles/global.styles"
 
 export default class Layout extends Component {
 
@@ -18,21 +19,28 @@ export default class Layout extends Component {
 
   render() {
     const {
-      pkg,
+      data,
     } = this.context.metadata
 
     return (
-      <div className={ styles.layout }>
+      <div className={ styles.wrap }>
         <Helmet
+          link={ [
+            {
+              "rel": "stylesheet",
+              "href": "http://yui.yahooapis.com/pure/0.6.0/pure-min.css",
+            },
+            {
+              "rel": "stylesheet",
+              "href": "http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css",
+            },
+          ] }
           meta={ [
-            { property: "og:site_name", content: pkg.name },
-            { name: "twitter:site", content: `@${ pkg.twitter }` },
+            { property: "og:site_name", content: data.siteName },
           ] }
         />
         <Header />
-        <div className={ styles.content }>
-          { this.props.children }
-        </div>
+        { this.props.children }
         <Footer />
       </div>
     )

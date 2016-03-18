@@ -1,0 +1,43 @@
+@import "../../styles/globals";
+
+.wrap {
+  width: 100%;
+  min-height: 450px;
+  position: relative;
+  text-align: center;
+  background: url("./teeth.png") no-repeat top center / cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  font-size: 2.4rem;
+}
+
+.col {
+  margin: auto;
+}
+
+.button {
+  composes: pure-button from "purecss/build/buttons.css";
+  margin-top: 2rem;
+  background: var(--mainColor);
+  font-size: 1.5rem;
+  color: #fff;
+}

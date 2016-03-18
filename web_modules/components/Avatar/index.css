@@ -1,0 +1,33 @@
+@import "../../styles/globals.css";
+
+.wrap {
+  display: inline-block;
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--borderColor);
+  min-height: 100px;
+}
+
+.wrap:hover .details {
+  transition: all 0.3s;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+}
+
+.details {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.innerDetails {
+  margin: auto;
+  color: #fff;
+}

@@ -1,8 +1,10 @@
-// you can add any STATIC data you want here
 import pkg from "../../package.json"
+
+const data = {
+  siteName: "Nha Khoa Phước Bình",
+}
 
 export default {
   pkg,
-  // you can add any DYNAMIC data you need here
-  // ...
+  data,
 }

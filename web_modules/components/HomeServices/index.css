@@ -1,0 +1,6 @@
+@import "../../styles/globals";
+
+.wrap {
+  background: var(--backgroundColor);
+  border-bottom: 1px solid var(--borderColor);
+}

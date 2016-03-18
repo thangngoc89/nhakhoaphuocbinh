@@ -1,0 +1,21 @@
+@import "../../styles/globals";
+
+.wrap {
+  background: #fff;
+  line-height: 3rem;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
+
+  @media (--md) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  & a {
+    color: #000;
+  }
+
+  & ul {
+    float: right;
+  }
+}

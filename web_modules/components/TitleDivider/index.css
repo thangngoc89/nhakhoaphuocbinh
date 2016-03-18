@@ -1,0 +1,9 @@
+@import "../../styles/globals.css";
+
+.wrap {
+  height: 2px;
+  margin: auto;
+  width: 80px;
+  display: block;
+  background: var(--mainColor);
+}

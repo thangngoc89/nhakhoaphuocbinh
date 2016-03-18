@@ -1,0 +1,7 @@
+@import "../../styles/globals";
+
+.wrap {
+  border-bottom: 1px solid var(--borderColor);
+  text-align: center;
+  padding-bottom: 3rem;
+}

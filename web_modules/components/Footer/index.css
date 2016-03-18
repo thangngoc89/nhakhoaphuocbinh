@@ -1,0 +1,34 @@
+@import "../../styles/globals";
+
+.wrap {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: inherit;
+  background: var(--backgroundColor);
+
+  @media (--md) {
+    padding: 4rem 0;
+  }
+}
+
+.heart {
+  color: red;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.social {
+  & span {
+    padding: 0.2rem;
+  }
+
+  & svg {
+    fill: #333;
+    width: 2rem;
+    height: auto;
+  }
+}

@@ -5,7 +5,7 @@ import ExtractTextPlugin from "extract-text-webpack-plugin"
 
 import renderer from "./remark-renderer"
 
-export default ({ config, pkg }) => ({
+export default ({ config }) => ({
   ...config.dev && {
     devtool: "cheap-module-eval-source-map",
   },
@@ -17,20 +17,6 @@ export default ({ config, pkg }) => ({
         query: {
           context: path.join(config.cwd, config.source),
           renderer: renderer,
-          feedsOptions: {
-            title: pkg.name,
-            site_url: pkg.homepage,
-          },
-          feeds: {
-            "feed.xml": {
-              collectionOptions: {
-                filter: { layout: "Post" },
-                sort: "date",
-                reverse: true,
-                limit: 20,
-              },
-            },
-          },
         },
       },
       {
@@ -39,8 +25,17 @@ export default ({ config, pkg }) => ({
           "style-loader",
           "css-loader" + (
             "?modules"+
-            "&localIdentName=[path][name]--[local]--[hash:base64:5]"
+            "&localIdentName=[name]__[local]-[hash:base64:5]"
           ) + "!" +
+          "postcss-loader",
+        ),
+        exclude: /node_modules/,
+      },
+      {
+        test: /global\.styles$/,
+        loader: ExtractTextPlugin.extract(
+          "style-loader",
+          "css-loader!",
           "postcss-loader",
         ),
       },
@@ -59,6 +54,7 @@ export default ({ config, pkg }) => ({
 
   postcss: () => [
     require("stylelint")(),
+    require("postcss-import")(),
     require("postcss-cssnext")({ browsers: "last 2 versions" }),
     require("postcss-browser-reporter")(),
     require("postcss-reporter")(),
