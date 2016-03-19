@@ -55,7 +55,9 @@ export default ({ config }) => ({
   postcss: () => [
     require("stylelint")(),
     require("postcss-import")(),
-    require("postcss-cssnext")({ browsers: "last 2 versions" }),
+    require("postcss-cssnext")({
+      browsers: [ "last 2 versions", "ie >= 8", "iOS >= 6", "Android >= 4" ],
+    }),
     require("postcss-browser-reporter")(),
     require("postcss-reporter")(),
   ],
