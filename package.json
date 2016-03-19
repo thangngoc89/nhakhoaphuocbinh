@@ -13,7 +13,8 @@
     "deploy": "surge dist staging.nhakhoaphuocbinh.com"
   },
   "statinamic": {
-    "CNAME": true
+    "CNAME": true,
+    "assets": false
   },
   "babel": {
     "presets": [

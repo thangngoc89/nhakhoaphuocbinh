@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
 import invariant from "invariant"
+import cx from "classnames"
+
+import styles from "./index.css"
 
 export default class Page extends Component {
 
@@ -9,7 +12,7 @@ export default class Page extends Component {
     __filename: PropTypes.string.isRequired,
     __url: PropTypes.string.isRequired,
     head: PropTypes.object.isRequired,
-    body: PropTypes.string.isRequired,
+    body: PropTypes.string,
   };
 
   static contextTypes = {
@@ -48,24 +51,25 @@ export default class Page extends Component {
     ]
 
     return (
-      <div>
+      <main className={ cx("pure-g", styles.wrap) }>
         <Helmet
           title={ metaTitle }
           meta={ meta }
         />
-
-        {
-          head.title &&
-          <h1>{ head.title }</h1>
-        }
-        {
-          body &&
-          <div
-            dangerouslySetInnerHTML={ { __html: body } }
-          />
-        }
-        { this.props.children }
-      </div>
+        <div className="pure-u-1 pure-u-md-20-24" style={ { margin: "auto" } }>
+          {
+            head.title &&
+            <h1>{ head.title }</h1>
+          }
+          {
+            body &&
+            <div
+              dangerouslySetInnerHTML={ { __html: body } }
+            />
+          }
+          { this.props.children }
+        </div>
+      </main>
     )
   }
 }

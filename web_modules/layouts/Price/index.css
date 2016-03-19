@@ -1,0 +1,21 @@
+@import "../../styles/globals";
+
+.sectionTitle {
+  background: var(--mainColor);
+  padding: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.row {
+  padding: 1rem 0;
+  background: #fff;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.row:nth-child(2n) {
+  background: var(--backgroundColor);
+}
+
+:global .itemPrice {
+  text-align: right;
+}
