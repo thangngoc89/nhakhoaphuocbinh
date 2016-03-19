@@ -10,7 +10,7 @@
     "build": "statinamic build",
     "pretest": "npm run lint",
     "test": "npm run build",
-    "deploy": "surge dist staging.nhakhoaphuocbinh.com"
+    "deploy": "surge dist nhakhoaphuocbinh.com"
   },
   "statinamic": {
     "CNAME": true,
