@@ -14,7 +14,8 @@
   },
   "statinamic": {
     "CNAME": true,
-    "assets": false
+    "assets": false,
+    "appcache": true
   },
   "babel": {
     "presets": [
