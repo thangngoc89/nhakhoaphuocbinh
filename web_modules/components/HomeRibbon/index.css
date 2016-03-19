@@ -7,7 +7,7 @@
   text-align: center;
   background: url("./teeth.png") no-repeat top center / cover;
   background-attachment: fixed;
-  display: flex;
+  display: flex !important;
   align-items: center;
 
   &::before {
