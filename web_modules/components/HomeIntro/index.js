@@ -1,10 +1,13 @@
 import React, { Component } from "react"
 import cx from "classnames"
 import styles from "./index.css"
-
 import logoArt from "../../../arts/logo-art@1x.png"
 
 export default class HomeIntro extends Component {
+  scrollToService() {
+    require("smooth-scroll").animateScroll("#services")
+  }
+
   render() {
     return (
       <section className={ cx("pure-u-1", styles.wrap) }>
@@ -19,7 +22,12 @@ export default class HomeIntro extends Component {
           <h1>Nha Khoa Phước Bình</h1>
           <h2>Tận tâm - Thân thiện - Chuyên nghiệp</h2>
 
-          <button className={ styles.button }>Tìm hiểu ngay</button>
+          <button
+            className={ styles.button }
+            onClick={ this.scrollToService.bind(this) }
+          >
+            Tìm hiểu ngay
+          </button>
         </div>
       </section>
     )

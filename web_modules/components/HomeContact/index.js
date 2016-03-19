@@ -32,7 +32,7 @@ const data = [
 export default class HomeContact extends Component {
   render() {
     return (
-      <section className={ cx("pure-u-1", styles.wrap) }>
+      <section id="contact" className={ cx("pure-u-1", styles.wrap) }>
         {
           data.map((entry) => (
             <div

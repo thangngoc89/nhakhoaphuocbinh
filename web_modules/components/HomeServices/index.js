@@ -25,7 +25,7 @@ const data = [
 export default class HomeServices extends Component {
   render() {
     return (
-      <section className={ cx("pure-u-1", styles.wrap) }>
+      <section id="services" className={ cx("pure-u-1", styles.wrap) }>
         <SectionHeader
           heading="Dịch vụ nha khoa"
           subHeading="Tại Nha Khoa Phước Bình chúng tôi cung cấp những dịch vụ sau"
