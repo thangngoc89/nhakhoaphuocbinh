@@ -28,11 +28,11 @@ export default class Layout extends Component {
           link={ [
             {
               "rel": "stylesheet",
-              "href": "http://yui.yahooapis.com/pure/0.6.0/pure-min.css",
+              "href": "//yui.yahooapis.com/pure/0.6.0/pure-min.css",
             },
             {
               "rel": "stylesheet",
-              "href": "http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css",
+              "href": "//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css",
             },
           ] }
           meta={ [
