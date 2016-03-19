@@ -10,6 +10,7 @@ export default class Price extends Component {
   render() {
     return (
       <Page {...this.props}>
+        <p><strong>*Các giá dưới đây được tính theo Việt Nam Đồng VNĐ</strong></p>
         {
           Object.keys(data).map((section) => (
             <div>
