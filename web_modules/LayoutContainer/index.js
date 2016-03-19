@@ -25,16 +25,6 @@ export default class Layout extends Component {
     return (
       <div className={ styles.wrap }>
         <Helmet
-          link={ [
-            {
-              "rel": "stylesheet",
-              "href": "https://npmcdn.com/purecss@0.6.0/build/pure-min.css",
-            },
-            {
-              "rel": "stylesheet",
-              "href": "https://npmcdn.com/purecss@0.6.0/build/grids-responsive-min.css",
-            },
-          ] }
           meta={ [
             { property: "og:site_name", content: data.siteName },
           ] }
