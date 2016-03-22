@@ -14,10 +14,6 @@ export default ({ config }) => ({
       { // statinamic requirement
         test: /\.md$/,
         loader: "statinamic/lib/content-loader",
-        query: {
-          context: path.join(config.cwd, config.source),
-          renderer: renderer,
-        },
       },
       {
         test: /\.css$/,
@@ -50,6 +46,13 @@ export default ({ config }) => ({
         loader: "raw-loader",
       },
     ],
+  },
+
+  statinamic: {
+    loader: {
+      context: path.join(config.cwd, config.source),
+      renderer: renderer,
+    },
   },
 
   postcss: () => [

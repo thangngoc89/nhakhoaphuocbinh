@@ -54,7 +54,6 @@
     "eslint-plugin-react": "^4.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.1",
-    "highlight.js": "^8.5.0",
     "history": "^2.0.0",
     "invariant": "^2.1.1",
     "json-loader": "^0.5.2",
@@ -83,10 +82,7 @@
     "postcss-import": "^8.0.2",
     "purecss": "^0.6.0",
     "remark": "^4.1.2",
-    "remark-autolink-headings": "^3.0.0",
-    "remark-highlight.js": "^3.0.0",
     "remark-html": "^3.0.0",
-    "remark-slug": "^4.1.0",
     "smooth-scroll": "github:cferdinandi/smooth-scroll"
   }
 }
