@@ -82,7 +82,7 @@
     "postcss-import": "^8.0.2",
     "purecss": "^0.6.0",
     "remark": "^4.1.2",
-    "remark-html": "^3.0.0",
+    "remark-html": "^5.0.0",
     "smooth-scroll": "github:cferdinandi/smooth-scroll"
   }
 }
